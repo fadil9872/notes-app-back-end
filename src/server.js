@@ -16,6 +16,8 @@ const init = async () => {
 
   await server.start();
   console.log(`Server berjalan pada ${server.info.uri}`);
+  // await server.stop();
+  // console.log(`Server berhenti pada ${server.info.uri}`);
 };
 
 init();

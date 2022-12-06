@@ -42,7 +42,7 @@ const addNoteHandler = (request, h) => {
     status: 'fail',
     message: 'Catatan gagal ditambahkan',
   });
-  response.code(500);
+  response.code(404);
   return response;
 };
 
@@ -92,7 +92,7 @@ const getNoteByIdHandler = (req, h) => {
       status: 'success',
       message: 'Data berhasil ditemukan',
       data: finded,
-    }).code(404);
+    }).code(200);
     return response;
   }
   const response = h.response({
